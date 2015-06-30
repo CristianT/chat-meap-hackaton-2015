@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>My Test Chat</title>
+	<script type="text/javascript" src="../js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="../js/App.js"></script>
+	<link rel="stylesheet" type="text/css" href="../styles/index.css">
+
+	<script src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="../js/chat.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="chatController">
+
+<ul class="chat-thread">
+
+	<li>Whats up men?</li>
+	<li>Hi mate </li>
+	<li>You You madafaka</li>
+	<li>This is my new chat style</li>
+	<li>Looks nice</li>
+
+</ul>
+
+
+
+<form ng-controller="sendMessageController" class="chat-window">
+	
+	<input class="chat-window-message" ng-model="messageToSend" name="chat-window-message" type="text" autocomplete="off" autofocus />
+	
+</label>
+	
+
+</form>
+
+</body>
+</html>

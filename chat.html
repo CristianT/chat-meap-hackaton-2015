@@ -1,0 +1,19 @@
+
+
+		<div class="chat-box">
+			<ul class="chat-thread" ng-repeat="message in messages">
+				 <li ng-if="message.ownMessage == true" class="ownMessage">
+			       {{ message.message }} 
+			    </li>
+			    <li ng-if="message.ownMessage != true" >
+			       {{message.nickName}}: {{ message.message }} 
+			    </li>
+			</ul>
+		</div>
+		<form ng-controller="sendMessageController"  ng-submit="sendMessage()" class="chat-window">
+
+			<input type="hidden" ng-model="nickName" />
+			<input class="chat-window-message" ng-model="message" name="chat-window-message" type="text" autocomplete="off" autofocus />
+			<input type="submit" class="chat-window-message" />
+		</form>
+

@@ -1,0 +1,92 @@
+@ChatBoxHeight:					100%;
+
+@chat-thread-messages-color:        white;
+@chat-thread-messages-color:        white;
+@chat-thread-bgd-color:        rgba(25,147,147,0.2);
+@ownMessage-color:				#00FF00;
+@backGroundColor:				-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%;
+body {
+	padding: 0;	
+	margin: 0;
+	background: -moz-linear-gradient(@backGroundColor);
+	background: -webkit-linear-gradient(@backGroundColor);
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.chat-thread {
+	margin: 24px auto 0 auto;
+	padding: 0 20px 0 0;
+	list-style: none;
+	overflow-y: auto;
+  	overflow-x: hidden;
+  li {
+	position: relative;
+	clear: both;
+	float:left;
+	color: @chat-thread-messages-color;
+	padding: 16px 40px 16px 20px;
+	margin: 0 0 20px 0;
+	font: 16px/20px 'Noto Sans', sans-serif;
+	border-radius: 10px;
+	background-color: @chat-thread-bgd-color;
+	}
+	li.ownMessage{
+		float:right;
+		color:@ownMessage-color;
+	}
+}
+.chat-window {
+	position: fixed;
+	bottom: 0px;
+	margin-bottom:0px;
+	padding-bottom:18px;
+	background:@backGroundColor;
+}
+
+
+input[type="submit"].chat-window-message {
+     cursor:pointer;
+     font-size:20px;
+
+}
+
+.chat-window-message {
+	width: 100%;
+	height: @ChatBoxHeight;
+	font: 20px 'Noto Sans', sans-serif;
+	background: none;
+	color: #0AD5C1;
+	border: 0;
+	border-bottom: 1px solid @chat-thread-bgd-color;
+	outline: none;
+}
+
+
+
+// A tiny bit responsive...
+// --------------------------------------
+/* Small screens */
+@media all and (max-width: 767px) {
+	.chat-thread {
+		width: 90%;
+	}
+
+	.chat-window {
+		left: 5%;
+		width: 90%;
+	}
+}
+
+/* Medium and large screens */
+@media all and (min-width: 768px) {
+	.chat-thread {
+		width: 50%;
+	}
+
+	.chat-window {
+		left: 25%;
+		width: 50%;
+	}
+}
+

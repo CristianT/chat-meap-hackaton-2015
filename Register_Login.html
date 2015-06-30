@@ -1,0 +1,24 @@
+<div class="align">
+  <div class="site__container">
+    <div class="grid__container">
+      <form ng-submit="login()"  class="form form--login">
+        <div class="form__field">
+          <label class="fontawesome-user fa fa-user" for="login__nickName"><span class="hidden">Nick</span></label>
+          <input id="login__nickname" ng-model="nickName" type="text" class="form__input" placeholder="Nick" required>
+        </div>
+        <div class="form__field">
+          <label class="fontawesome-lock fa fa-lock" for="login__password"><span class="hidden">Password</span></label>
+          <input id="login__password" ng-model="passWord" type="password" class="form__input" placeholder="Password" required>
+        </div>
+        <div class="form__field">
+          <input type="submit" value="Sign In">
+        </div>
+      </form>
+      <!--<p class="text--center">Not a member? <a href="#">Sign up now</a> <span class="fontawesome-arrow-right"></span></p>-->
+    </div>
+
+  </div>
+
+
+</div>
+
